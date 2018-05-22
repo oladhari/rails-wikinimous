@@ -1,0 +1,7 @@
+<%= render "navbar", article: @article %>
+<h1><%= @article.title %><%= link_to "edit", edit_article_path(@article) %>
+  <%= link_to "Delete", article_path(@article),
+        method: :delete,
+        data: { confirm: "Are you sure?" } %>
+<%= link_to "back to index", articles_path %></h1>
+<p><%= @article.content %></p>
